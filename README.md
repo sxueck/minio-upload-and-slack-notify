@@ -12,7 +12,7 @@ Put the following step in your workflow:
 
 ```yml
 - name: Minio Deploy
-uses: iamapinan/minio-upload-and-slack-notify@v2.2
+uses: iamapinan/minio-upload-and-slack-notify@v2.3
 with:
   endpoint: ${{ secrets.MINIO_ENDPOINT }}
   access_key: ${{ secrets.MINIO_ACCESS_KEY }}
@@ -47,7 +47,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Minio Deploy
-        uses: iamapinan/minio-upload-and-slack-notify@v2.2
+        uses: iamapinan/minio-upload-and-slack-notify@v2.3
         with:
           endpoint: ${{ secrets.MINIO_ENDPOINT }}
           access_key: ${{ secrets.MINIO_ACCESS_KEY }}
