@@ -1,5 +1,5 @@
-name: 'Minio Deploy'
-description: 'Deploy to Minio Storage'
+name: 'Easy Minio Upload'
+description: 'Upload to Minio Storage'
 author: 'hkdobrev'
 inputs:
   endpoint:
