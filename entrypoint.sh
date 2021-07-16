@@ -4,3 +4,5 @@ mc alias set deploy $MINIO_ENDPOINT $MINIO_ACCESS_KEY $MINIO_SECRET_KEY --api S3
 echo "deploy to: $1 deploy/$2"
 ls $1
 mc mirror --overwrite $1 "deploy/$2"
+echo "URL to download"
+mc share download deploy/$2/app-release.apk
