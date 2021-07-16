@@ -12,7 +12,7 @@ Put the following step in your workflow:
 
 ```yml
 - name: Minio Deploy
-uses: iamapinan/minio-deploy-action@v1.8
+uses: iamapinan/minio-deploy-action@v1.9
 with:
   endpoint: ${{ secrets.MINIO_ENDPOINT }}
   access_key: ${{ secrets.MINIO_ACCESS_KEY }}
@@ -22,6 +22,8 @@ with:
   source_dir: 'public'
   target_dir: '/'
   slack_hook: ${{ secrets.SLACK_HOOK }}
+  slack_msg: "send builded file for test here is download info"
+  slack_botname: "Notify"
 ```
 
 Workflow example:
@@ -44,7 +46,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Minio Deploy
-        uses: iamapinan/minio-deploy-action@v1.8
+        uses: iamapinan/minio-deploy-action@v1.9
         with:
           endpoint: ${{ secrets.MINIO_ENDPOINT }}
           access_key: ${{ secrets.MINIO_ACCESS_KEY }}
@@ -53,6 +55,8 @@ jobs:
           source_dir: 'public'
           target_dir: '/'
           slack_hook: ${{ secrets.SLACK_HOOK }}
+          slack_msg: "send builded file for test here is download info"
+          slack_botname: "Notify"
 ```
 
 ## License
