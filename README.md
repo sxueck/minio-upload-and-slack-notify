@@ -21,6 +21,7 @@ with:
   # Optional inputs with their defaults:
   source_dir: 'public'
   target_dir: '/'
+  file: 'app-release.apk'
   slack_hook: ${{ secrets.SLACK_HOOK }}
   slack_msg: "send builded file for test here is download info"
   slack_botname: "Notify"
@@ -54,6 +55,7 @@ jobs:
           bucket: 'mybucket'
           source_dir: 'public'
           target_dir: '/'
+          file: 'app-release.apk'
           slack_hook: ${{ secrets.SLACK_HOOK }}
           slack_msg: "send builded file for test here is download info"
           slack_botname: "Notify"
