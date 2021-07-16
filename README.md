@@ -1,6 +1,8 @@
-# Minio Deploy GitHub Action
+# Minio Upload GitHub Action
 
-Run [minio client][] in GitHub Actions to deploy files to Minio object storage.
+- Run [minio client][] in GitHub Actions to deploy files to Minio object storage. 
+- Get uploaded url
+- Send notification to slack. 
 
 It uses the `mc mirror --overwrite` command to deploy.
 
@@ -10,7 +12,7 @@ Put the following step in your workflow:
 
 ```yml
 - name: Minio Deploy
-uses: iamapinan/minio-deploy-action@v1.5
+uses: iamapinan/minio-deploy-action@v1.8
 with:
   endpoint: ${{ secrets.MINIO_ENDPOINT }}
   access_key: ${{ secrets.MINIO_ACCESS_KEY }}
@@ -19,6 +21,7 @@ with:
   # Optional inputs with their defaults:
   source_dir: 'public'
   target_dir: '/'
+  slack_hook: ${{ secrets.SLACK_HOOK }}
 ```
 
 Workflow example:
@@ -41,7 +44,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Minio Deploy
-        uses: iamapinan/minio-deploy-action@v1.5
+        uses: iamapinan/minio-deploy-action@v1.8
         with:
           endpoint: ${{ secrets.MINIO_ENDPOINT }}
           access_key: ${{ secrets.MINIO_ACCESS_KEY }}
@@ -49,6 +52,7 @@ jobs:
           bucket: 'mybucket'
           source_dir: 'public'
           target_dir: '/'
+          slack_hook: ${{ secrets.SLACK_HOOK }}
 ```
 
 ## License
