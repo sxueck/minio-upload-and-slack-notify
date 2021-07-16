@@ -1,5 +1,5 @@
-name: 'Easy Minio Upload'
-description: 'Upload to Minio Storage'
+name: 'Minio Upload and Slack Notify'
+description: 'Upload to Minio Storage and send notification to slack.'
 author: 'hkdobrev'
 inputs:
   endpoint:
