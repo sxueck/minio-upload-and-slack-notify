@@ -1,4 +1,4 @@
-# Minio Upload GitHub Action
+# Minio Upload and Slack Notify
 
 - Run [minio client][] in GitHub Actions to deploy files to Minio object storage. 
 - Get uploaded url
