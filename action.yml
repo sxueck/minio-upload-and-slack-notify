@@ -30,6 +30,7 @@ runs:
     MINIO_ENDPOINT: ${{ inputs.endpoint }}
     MINIO_ACCESS_KEY: ${{ inputs.access_key }}
     MINIO_SECRET_KEY: ${{ inputs.secret_key }}
+    FILE_TO_DOWNLOAD: ${{ inputs.file }}
     MSG: ${{ inputs.slack_msg }}
     BOT: ${{ inputs.slack_botname }}
   args:
